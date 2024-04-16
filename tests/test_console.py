@@ -56,3 +56,6 @@ class TestConsole(unittest.TestCase):
         with patch('sys.stdout', new=StringIO()) as f:
             HBNBCommand().onecmd("create User")
             self.assertTrue(f.getvalue() is not None)
+            
+if __name__ == "__main__":
+    unittest.main()
