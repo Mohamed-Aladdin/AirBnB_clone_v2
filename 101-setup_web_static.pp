@@ -1,5 +1,4 @@
 # puppet version of the setup of nginx
-
 exec { '/usr/bin/env apt-get -y update' : }
 -> exec { '/usr/bin/env apt-get -y install nginx' : }
 -> exec { '/usr/bin/env sed -i "/listen \[::\]:80 default_server/ a\\\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default' : }
